@@ -5,10 +5,20 @@ import previous from "../playerbuttons/Previous.png";
 import next from "../playerbuttons/Next.png";
 import play from "../playerbuttons/Play.png";
 import repeat from "../playerbuttons/Repeat.png";
+import { playSong } from "../redux/actions";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { FaPause } from "react-icons/fa";
 
 const Bottombar = () => {
+  const playerData = useSelector(state => state.player);
+  const dispatch = useDispatch();
+
   return (
     <div className="bg-container pt-1 fixed-bottom ">
+      <Row className="justify-content-center" style={{ color: "white" }}>
+        {playerData.title}
+      </Row>
       <Row className="justify-content-center">
         <Col xs={4} md={4} lg={2} className="playerControls mt-1 text-center">
           <Row>
@@ -24,7 +34,17 @@ const Bottombar = () => {
             </Col>
             <Col>
               <Link to="/">
-                <Image src={play} alt="play" />
+                {playerData.title ? (
+                  <FaPause
+                    onClick={() => {
+                      dispatch(playSong({}));
+                    }}
+                    className="fs-6"
+                    style={{ color: "white" }}
+                  />
+                ) : (
+                  <Image src={play} alt="play" />
+                )}
               </Link>
             </Col>
             <Col>

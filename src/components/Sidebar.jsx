@@ -35,7 +35,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <div className="input-group mt-3">
+                <div className="input-group mt-3 align-items-center">
                   <input
                     type="text"
                     className="form-control mb-2"
@@ -44,9 +44,9 @@ const Sidebar = () => {
                     aria-label="Search"
                     aria-describedby="basic-addon2"
                   />
-                  <div className="input-group-append" style={{ marginBottom: "4%" }}>
+                  <div className="input-group-append " style={{ marginBottom: "4%" }}>
                     <button
-                      className="btn btn-outline-secondary btn-sm"
+                      className="btn btn-outline-secondary btn-sm fs-5"
                       type="button"
                       id="button-addon1"
                       // onClick="search()"

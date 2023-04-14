@@ -1,7 +1,18 @@
 export const ADD_SONGS = "ADD_SONGS";
 export const ADD_ALBUM = "ADD_ALBUM";
+export const PLAY_SONG = "PLAY_SONG";
+export const TOGGLE_FAVOURITE = "TOGGLE_FAVOURITE";
 const songEndpoint = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const albumEndpoit = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+
+export const playSong = song => {
+  return async dispatch => {
+    dispatch({
+      type: PLAY_SONG,
+      payload: song,
+    });
+  };
+};
 
 export const getSongsAction = songType => {
   return async dispatch => {
@@ -42,5 +53,14 @@ export const getAlbumAction = id => {
     } catch (error) {
       console.log(error);
     }
+  };
+};
+
+export const toggleFavourite = songId => {
+  return async dispatch => {
+    dispatch({
+      type: TOGGLE_FAVOURITE,
+      payload: songId,
+    });
   };
 };

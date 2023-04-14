@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Song from "./Song";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { getRockAction, getPopAction, getHipHopAction } from "../redux/actions";
 import { getSongsAction } from "../redux/actions";
 
 const Main = () => {
