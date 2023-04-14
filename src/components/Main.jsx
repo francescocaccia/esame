@@ -1,5 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Song from "./Song";
 
 const Main = () => {
   return (
@@ -16,9 +17,13 @@ const Main = () => {
 
       <Row>
         <Col xs={10}>
-          <div id="searchResults" style={{ display: "none" }}>
+          <div id="searchResults">
             <h2>Search Results</h2>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" />
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
+              <Col className="text-center" id="id">
+                <Song />
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>
@@ -27,7 +32,11 @@ const Main = () => {
         <Col xs={10}>
           <div id="rock">
             <h2>Rock Classics</h2>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection" />
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection">
+              <Col className="text-center" id="id">
+                <Song />
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>
@@ -36,7 +45,11 @@ const Main = () => {
         <Col xs={10}>
           <div id="pop">
             <h2>Pop Culture</h2>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="popSection" />
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="popSection">
+              <Col className="text-center" id="id">
+                <Song />
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>
@@ -45,7 +58,11 @@ const Main = () => {
         <Col xs={10}>
           <div id="hiphop">
             <h2>#HipHop</h2>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="hipHopSection" />
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="hipHopSection">
+              <Col className="text-center" id="id">
+                <Song />
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>
